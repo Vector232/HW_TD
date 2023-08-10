@@ -1,9 +1,4 @@
-import os
 import requests
-from dotenv import load_dotenv
-import json
-
-load_dotenv()
 
 def create_folder(token, path):
     url = 'https://cloud-api.yandex.net/v1/disk/resources'

@@ -12,6 +12,9 @@ class TestTask2:
 
     def test_create_folder(self):
         assert create_folder(self.token, self.name).status_code == 201
+        assert create_folder(self.token, self.name).status_code == 409
+        assert create_folder('self.token', self.name).status_code == 401
+
 
     def test_existence_folder(self):
         assert get_info(self.token, self.name).status_code == 200
